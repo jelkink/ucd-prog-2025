@@ -13,7 +13,7 @@ class Party:
     return len(self.voters)
 
   def vote(self, voter):
-    self.voters.append(voter)
+    self.voters.append(voter) # We could have just counted voters, but some strategies need access to the list of voters
 
   def resetVoters(self):
     self.voters = []
