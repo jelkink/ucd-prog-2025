@@ -2,12 +2,11 @@ from location import Location
 
 class Party:
 
-  def __init__(self, name, x, y, strategy):
+  def __init__(self, name, strategy):
     self.name = name
     self.location = Location()    
     self.strategy = strategy
 
-    self.location.set(x, y)
     self.resetVoters()
 
   def countVoters(self):
@@ -19,5 +18,8 @@ class Party:
   def resetVoters(self):
     self.voters = []
 
-  def.getLocation(self):
+  def getLocation(self):
     return self.location
+  
+  def __str__(self):
+    return "%10s (%s) at %s has %d voters" % (self.name, self.strategy, self.location, self.countVoters())

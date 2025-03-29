@@ -12,7 +12,7 @@ class Simulation:
       voter = Voter()
       self.voters.append(voter)
     for i in range(5):       # as an example, 5 parties - should be configured!
-      party = Party("Party " + str(i), 0, 0, "sticker")
+      party = Party("Party " + str(i), "sticker")
       self.parties.append(party)
 
   def run(self):
@@ -21,4 +21,4 @@ class Simulation:
         voter.vote(self.parties)
 
     for party in self.parties:
-      print(party.name + ": " + str(party.countVoters()))
+      print(party)

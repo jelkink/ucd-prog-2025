@@ -7,7 +7,6 @@ class Voter:
     self.location = Location()
 
   def vote(self, parties):
-    closestParty = parties[0]
     closestDistance = 2 # any value above sqrt(2) will do
 
     for party in parties:
